@@ -1,3 +1,4 @@
+import { Favorite } from "../cmps/favorite.jsx"
 import { List } from "../cmps/list.jsx"
 import { Search } from "../cmps/search.jsx"
 import { frontEndService } from "../services/front-end-service.js"
@@ -19,6 +20,17 @@ export function Home() {
             setData(item)
         })
     }, [searchToUpdate, field])
+
+    useEffect(() => {
+        if (favoriteSongs.length <= 0) return
+        console.log(favoriteSongs)
+        // frontEndService.query(favoriteSongs).then((item) => {
+        //     console.log(item)
+        // })
+        // frontEndService.query(id)
+        console.log('favorite!')
+    }, [favoriteSongs])
+
 
     function updateSearch(value) {
         setSearchToUpdate(value)
@@ -51,6 +63,7 @@ export function Home() {
                 <div>Focus</div>
                 <Search updateSearch={updateSearch} />
                 <List data={data} updateFavSongs={updateFavSongs} />
+                {favoriteSongs.length > 0 && <Favorite favoriteSongs={favoriteSongs} />}
             </section>
         </section>}
     </section>

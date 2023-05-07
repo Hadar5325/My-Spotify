@@ -8,7 +8,7 @@ export function Song({ song, updateFavSongs }) {
 
     const refHeart = useRef(null);
 
-    
+
     function addToFavorites() {
         let operation
 
@@ -16,7 +16,7 @@ export function Song({ song, updateFavSongs }) {
 
         operation === 'remove' ? refHeart.current.style.fill = 'black' : refHeart.current.style.fill = 'red'
 
-        updateFavSongs(song.id, operation)
+        updateFavSongs(song, operation)
     }
 
     return <div className="song">
