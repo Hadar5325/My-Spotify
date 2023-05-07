@@ -1,25 +1,5 @@
-div.category-heading,
-div.more,
-div.data-representation-1 {
-    display: flex;
-    flex-direction: row;
-}
 
-section.list-data {
-    background-color: rgb(186, 245, 245);
-    display: flex;
-    flex-direction: column;
-}
-
-section.category {
-    background-color: aquamarine;
-    margin-bottom: 2.5rem;
-}
-
-div.category-heading {
-    justify-content: space-between;
-}
-
-div.data-representation-1 {
-    scroll-snap-type: x mandatory;
+section.list{
+    background-color: bisque;
+    border: 2px solid black;
 }

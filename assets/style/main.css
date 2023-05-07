@@ -10,12 +10,15 @@
 @import 'base/fonts.css';
 
 /* Components */
-@import 'cmps/header.css';
-@import 'cmps/user-msg.css';
-@import 'cmps/wolt-svg.css';
 @import 'cmps/list.css';
-@import 'cmps/details.css';
+@import 'cmps/preivew.css';
+@import 'cmps/song.css';
+/* @import 'cmps/header.css'; */
+/* @import 'cmps/user-msg.css'; */
+/* @import 'cmps/wolt-svg.css'; */
+/* @import 'cmps/list.css'; */
+/* @import 'cmps/details.css'; */
 
 
 @import 'pages/home.css';
-@import 'pages/city.css';
+
