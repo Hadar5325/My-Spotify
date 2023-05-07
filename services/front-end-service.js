@@ -8,8 +8,10 @@ export const frontEndService = {
     query
 }
 
-function query(filterBy) {
-    return backendService.query(DATA_KEY, filterBy).then((data) => {
+function query(filterBy, field) {
+    console.log(filterBy)
+    console.log(field)
+    return backendService.query(DATA_KEY, filterBy, field).then((data) => {
         return data
     })
 }

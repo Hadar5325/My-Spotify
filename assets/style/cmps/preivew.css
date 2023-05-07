@@ -1,6 +1,6 @@
 
 div.preview{
-    background-color: azure;
+    /* background-color: azure; */
     border: 2px solid rgb(230, 69, 69);
     display: flex;
     flex-direction: row;

@@ -1,4 +1,5 @@
 import { List } from "../cmps/list.jsx"
+import { Search } from "../cmps/search.jsx"
 import { frontEndService } from "../services/front-end-service.js"
 
 const { Outlet, Link } = ReactRouterDOM
@@ -7,12 +8,20 @@ const { useParams, useNavigate } = ReactRouterDOM
 
 export function Home() {
     const [data, setData] = useState(null)
+    const [searchToUpdate, setSearchToUpdate] = useState('')
+    const [field, setField] = useState('')
+
 
     useEffect(() => {
-        frontEndService.query().then((item) => {
+        frontEndService.query(searchToUpdate, field).then((item) => {
             setData(item)
         })
-    }, [])
+    }, [searchToUpdate])
+
+    function updateSearch(value) {
+        console.log(value)
+        setSearchToUpdate(value, 'artist')
+    }
 
     return <section className="app">
         {!data && <div>"loading..." </div>}
@@ -27,6 +36,7 @@ export function Home() {
             </section>
             <section className="main-data">
                 <div>Focus</div>
+                <Search updateSearch={updateSearch} />
                 <List data={data} />
             </section>
         </section>}
