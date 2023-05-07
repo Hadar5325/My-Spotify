@@ -1,0 +1,13 @@
+section.dashboard-container {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightpink;
+}
+
+section.dashboard {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    /* grid-template-rows: minmax(100px, 1fr); */
+}

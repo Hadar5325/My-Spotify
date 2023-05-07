@@ -60,6 +60,7 @@ export function Home() {
                 <div>Liked Songs</div>
             </section>
             <section className="main-data">
+                <Link to="/dashboard">Show dashboards</Link>
                 <div>Focus</div>
                 <Search updateSearch={updateSearch} />
                 <List data={data} updateFavSongs={updateFavSongs} />
