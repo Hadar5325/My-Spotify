@@ -25,12 +25,15 @@ export function Home() {
         setField('artist')
     }
 
-    function updateFavSongs() {
-        setFavoriteSongs(prev=>{
-            prev.push('helo')
-            console.log(prev)
+    function updateFavSongs(id, operation) {
+        setFavoriteSongs(prevArr => {
+            if (operation === 'add') return [id, ...prevArr]
+            else {
+                return prevArr.filter(item => {
+                    return item !== id
+                })
+            }
         })
-        console.log('from father')
     }
 
     return <section className="app">
