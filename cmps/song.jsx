@@ -20,9 +20,9 @@ export function Song({ song, updateFavSongs }) {
     }
 
     return <div className="song">
-        <div>
+        {/* <div>
             {song.id}
-        </div>
+        </div> */}
         <div>
             {song.title}
         </div>

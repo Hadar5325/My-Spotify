@@ -1,5 +1,6 @@
-div.preview {
+section.favorite-song {
     display: flex;
     flex-direction: row;
     padding: 10px 0;
+
 }

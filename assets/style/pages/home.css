@@ -10,6 +10,7 @@ section.home-page{
     grid-template-columns: 1fr 5fr;
 }
 section.main-data{
+    text-align: center;
     background-color: blanchedalmond;
     /* background-color: aqua; */
 }
