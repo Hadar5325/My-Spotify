@@ -1,1 +1,1 @@
-My spotify project, enjoy &hearts
+My spotify project, enjoy ❤️
