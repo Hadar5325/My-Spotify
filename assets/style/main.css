@@ -13,12 +13,8 @@
 @import 'cmps/list.css';
 @import 'cmps/preivew.css';
 @import 'cmps/song.css';
-@import 'cmps/favorite.css';
-/* @import 'cmps/header.css'; */
-/* @import 'cmps/user-msg.css'; */
-/* @import 'cmps/wolt-svg.css'; */
-/* @import 'cmps/list.css'; */
-/* @import 'cmps/details.css'; */
+@import 'cmps/favorite-list-songs.css';
+@import 'cmps/favorite-song.css';
 
 /* Pages*/
 @import 'pages/home.css';

@@ -1,4 +1,4 @@
-import { Favorite } from "../cmps/favorite.jsx"
+import { FavoriteListSongs } from "../cmps/FavoriteListSongs.jsx"
 import { List } from "../cmps/list.jsx"
 import { Search } from "../cmps/search.jsx"
 import { frontEndService } from "../services/front-end-service.js"
@@ -64,7 +64,7 @@ export function Home() {
                 <div>Focus</div>
                 <Search updateSearch={updateSearch} />
                 <List data={data} updateFavSongs={updateFavSongs} />
-                {favoriteSongs.length > 0 && <Favorite favoriteSongs={favoriteSongs} />}
+                {favoriteSongs.length > 0 && <FavoriteListSongs favoriteSongs={favoriteSongs} />}
             </section>
         </section>}
     </section>

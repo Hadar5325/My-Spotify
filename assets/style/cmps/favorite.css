@@ -1,6 +1,6 @@
-section.favorite-song {
+section.favorite-list-songs {
     display: flex;
     flex-direction: row;
     padding: 10px 0;
-
+    flex-wrap: wrap;
 }

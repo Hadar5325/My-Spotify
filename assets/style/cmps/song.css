@@ -1,8 +1,5 @@
 div.song {
     border: 2px solid black;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
 
 div.heart {
