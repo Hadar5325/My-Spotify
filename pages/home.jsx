@@ -11,16 +11,26 @@ export function Home() {
     const [searchToUpdate, setSearchToUpdate] = useState('')
     const [field, setField] = useState('')
 
+    const [favoriteSongs, setFavoriteSongs] = useState([])
+
 
     useEffect(() => {
         frontEndService.query(searchToUpdate, field).then((item) => {
             setData(item)
         })
-    }, [searchToUpdate])
+    }, [searchToUpdate, field])
 
     function updateSearch(value) {
-        console.log(value)
-        setSearchToUpdate(value, 'artist')
+        setSearchToUpdate(value)
+        setField('artist')
+    }
+
+    function updateFavSongs() {
+        setFavoriteSongs(prev=>{
+            prev.push('helo')
+            console.log(prev)
+        })
+        console.log('from father')
     }
 
     return <section className="app">
@@ -37,7 +47,7 @@ export function Home() {
             <section className="main-data">
                 <div>Focus</div>
                 <Search updateSearch={updateSearch} />
-                <List data={data} />
+                <List data={data} updateFavSongs={updateFavSongs} />
             </section>
         </section>}
     </section>

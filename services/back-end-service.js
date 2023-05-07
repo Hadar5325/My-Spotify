@@ -5,12 +5,9 @@ export const backendService = {
 
 function query(dbName, filterBy, field,  delay = 500 ) {
     let data = JSON.parse(localStorage.getItem(dbName)) || []
-    console.log(data)
-    console.log(filterBy)
-    console.log(field)
     if(filterBy !== ''){
        data = data.filter(item =>{
-            let lowerCaseArtist = item.artist.toLowerCase()
+            let lowerCaseArtist = item[field].toLowerCase()
             if(lowerCaseArtist.includes(filterBy)){
                 console.log('inside!')
                 return item
